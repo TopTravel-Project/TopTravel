@@ -1,12 +1,29 @@
 * {
-    --blue: #0066ff;
-    --grey: rgba(0, 0, 0, 0.2);
-    /* very light blue for background */
-    --light-blue: #f0f0f0;
+    /* colors */
+    /* BLUE */
+    --I-blue: #f0f0f0;
+    --II-blue: #238ef9;
+    --III-blue: #0066ff;
+    --IIII-blue: #1868B7;
+    /* WHITE */
+    --white: #fff;
     --glass-color: rgba(255, 255, 255, 0.3);
+    /* GREY */
+    --grey: rgba(0, 0, 0, 0.2);
+    --grey: #707A83;
+    /*GRADIENTS*/
+    --I-gradient: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    /* height */
     --nav-height: 3rem;
+    --height-no-nav: calc(100vh - var(--nav-height));
+    /* gap */
     --small-gap: 0.5rem;
     --big-gap: 2rem;
+    /* rounded corner radius */
+    --max-rounded: 100vw;
+    --small-rounded: 0.5rem;
+    --big-rounded: 1rem;
+    --very-small-rounded: 0.1rem;
 }
 
 body {
@@ -16,8 +33,8 @@ body {
 }
 
 nav {
-    height: 3rem;
-    background-color: white;
+    height: var(--nav-height);
+    background-color: var(--white);
     border-bottom: 1px solid var(--grey);
     padding: 0 2vw;
     display: flex;
@@ -28,49 +45,50 @@ nav {
     font-weight: 600;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: calc(100vh - var(--nav-height));
-    gap: 0.5rem;
-}
+main {}
 
-.servizi-container img {
-    height: 2rem;
-}
-
-.servizi-container .servizi-card {
-    display: grid;
-    place-items: center;
-    padding: 0.5rem;
-    border: 1px solid var(--grey);
-    border-radius: 0.5rem;
-    background-color: var(--glass-color);
-}
-
-.servizi-container {
+.funzionalità-container {
     display: flex;
-    gap: 0.5rem;
+    height: var(--height-no-nav);
+    gap: var(--small-gap);
+    padding: 0.5vw;
 }
 
-.left-container {
-    display: grid;
-    gap: 0.5rem;
-    grid-template-rows: 1fr auto;
+.funzionalità-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    border: 1px solid var(--II-blue);
+    box-shadow: inset 0 0.2rem 0 var(--II-blue);
 }
 
-.left-container .mappa {
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--grey);
+.funzionalità-container div {
+    box-sizing: margin-box;
+    z-index: var(--card-index);
+    transition-duration: 1s;
+    min-width: 100px;
 }
 
-.right-container {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    gap: 0.5rem;
+.funzionalità-container div:hover {
+    flex: 2;
+    color: var(--III-blue);
+    background: var(--I-gradient);
+    transition-duration: 0.2s;
+    font-size: 3vw;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--small-rounded);
+    text-decoration: underline;
+    box-shadow: inset 0 0.5rem 0 var(--II-blue);
+    animation: underline 1s ease-in-out forwards;
 }
 
-.right-container>div {
-    border: 1px solid var(--grey);
+@keyframes underline {
+    from {
+        text-underline-offset: 2rem;
+    }
+    to {
+        text-underline-offset: 0.2rem;
+    }
 }
