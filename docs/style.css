@@ -35,7 +35,7 @@ body {
 nav {
     height: var(--nav-height);
     background-color: var(--white);
-    border-bottom: 1px solid var(--grey);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     padding: 0 2vw;
     display: flex;
     align-items: center;
@@ -49,9 +49,9 @@ main {}
 
 .funzionalità-container {
     display: flex;
-    height: var(--height-no-nav);
-    gap: var(--small-gap);
-    padding: 0.5vw;
+    /* 1vw is the padding in the container, so *2 is mean that there isn't a scroll */
+    height: calc(var(--height-no-nav) - 1vw*2);
+    padding: 1vw;
 }
 
 .funzionalità-container div {
@@ -59,8 +59,8 @@ main {}
     align-items: center;
     justify-content: center;
     flex: 1;
-    border: 1px solid var(--II-blue);
-    box-shadow: inset 0 0.2rem 0 var(--II-blue);
+    border: 1px solid var(--I-blue);
+    box-shadow: inset 0 0 0 var(--II-blue);
 }
 
 .funzionalità-container div {
@@ -80,13 +80,14 @@ main {}
     border: none;
     border-radius: var(--small-rounded);
     text-decoration: underline;
-    box-shadow: inset 0 0.5rem 0 var(--II-blue);
-    animation: underline 1s ease-in-out forwards;
+    box-shadow: inset 0 0.3rem 0 var(--II-blue);
+    animation: underline 0.3s ease-in-out forwards;
+    margin: 0 var(--small-gap);
 }
 
 @keyframes underline {
     from {
-        text-underline-offset: 2rem;
+        text-underline-offset: 2vw;
     }
     to {
         text-underline-offset: 0.2rem;
