@@ -5,6 +5,8 @@
     --light-blue: #f0f0f0;
     --glass-color: rgba(255, 255, 255, 0.3);
     --nav-height: 3rem;
+    --small-gap: 0.5rem;
+    --big-gap: 2rem;
 }
 
 body {
