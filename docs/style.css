@@ -24,6 +24,7 @@
     --small-rounded: 0.5rem;
     --big-rounded: 1rem;
     --very-small-rounded: 0.1rem;
+    transition: all 0.2s ease;
 }
 
 body {
@@ -33,63 +34,71 @@ body {
 }
 
 nav {
-    height: var(--nav-height);
-    background-color: var(--white);
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-    padding: 0 2vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--I-blue);
+}
+
+nav {
+    height: 100vh;
+    font-size: 1.5rem;
+    color: var(--III-blue)
+}
+
+nav .nav-functionalities {
+    display: grid;
+}
+
+nav i {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 1rem white);
+}
+
+nav .nav-functionalities>div {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    place-content: center;
+}
+
+nav .nav-functionalities>div:hover {
+    background-color: var(--II-blue);
+    color: white;
+}
+
+.nav-button {
+    color: white;
+    background-color: var(--II-blue);
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    bottom: 3rem;
     display: flex;
-    align-items: center;
+    padding: 1rem;
+    border-radius: 0 10rem 10rem 0;
 }
 
-.logo {
-    font-weight: 600;
+.nav-button i {
+    font-size: 2rem;
 }
 
-main {}
-
-.funzionalità-container {
-    display: flex;
-    /* 1vw is the padding in the container, so *2 is mean that there isn't a scroll */
-    height: calc(var(--height-no-nav) - 1vw*2);
-    padding: 1vw;
+nav.nav-close .nav-functionalities div span {
+    font-size: 0;
 }
 
-.funzionalità-container div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    border: 1px solid var(--I-blue);
-    box-shadow: inset 0 0 0 var(--II-blue);
+nav.nav-close .nav-functionalities div i {
+    transform: translatex(0.4rem);
 }
 
-.funzionalità-container div {
-    box-sizing: margin-box;
-    z-index: var(--card-index);
-    transition-duration: 1s;
-    min-width: 100px;
+.nav-button {
+    opacity: 0.9;
+    border: 2px solid transparent
 }
 
-.funzionalità-container div:hover {
-    flex: 2;
-    color: var(--III-blue);
-    background: var(--I-gradient);
-    transition-duration: 0.2s;
-    font-size: 3vw;
-    font-weight: 600;
-    border: none;
-    border-radius: var(--small-rounded);
-    text-decoration: underline;
-    box-shadow: inset 0 0.3rem 0 var(--II-blue);
-    animation: underline 0.3s ease-in-out forwards;
-    margin: 0 var(--small-gap);
-}
-
-@keyframes underline {
-    from {
-        text-underline-offset: 2vw;
-    }
-    to {
-        text-underline-offset: 0.2rem;
-    }
+.nav-button:hover {
+    opacity: 1;
+    border: 2px solid var(--III-blue);
+    box-sizing: border-box;
 }
