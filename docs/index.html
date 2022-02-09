@@ -16,25 +16,50 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- for icons:
+    2: https://fontawesome.com/ 
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
     <!-- navbar -->
-    <nav>
-        <div class="logo">TopTravel.</div>
-    </nav>
-
-    <main>
-
-        <div class="funzionalità-container">
-            <div style="--card-index: 0;" class="funz-card-inner mappa-card">mappa</div>
-            <div style="--card-index: 1;" class="funz-card-inner chat-card">chat</div>
-            <div style="--card-index: 2;" class="funz-card-inner dove-card">dove</div>
-            <div style="--card-index: 3;" class="funz-card-inner programma-card">programma</div>
-            <div style="--card-index: 4;" class="funz-card-inner contattaci-card">contattaci</div>
+    <nav class="nav-close">
+        <div class="nav-functionalities">
+            <!-- 1 -->
+            <div class="funz-card-inner mappa-card">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>mappa</span>
+            </div>
+            <!-- 2 -->
+            <div class="funz-card-inner chat-card">
+                <i class="fa-solid fa-message"></i>
+                <span>chat</span>
+            </div>
+            <!-- 3 -->
+            <div class="funz-card-inner orario-card">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>programma</span>
+            </div>
+            <!-- 4 -->
+            <div class="funz-card-inner info-card">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>info</span>
+            </div>
         </div>
 
+        <!-- per aprire e chiudere la navbar -->
+        <div class="nav-button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+    </nav>
+
+    <main style="background-color: green">
+        hello world
     </main>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
