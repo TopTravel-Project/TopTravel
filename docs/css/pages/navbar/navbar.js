@@ -1,7 +1,11 @@
-let navIcon = document.querySelectorAll('.nav-icons-container>div');
+let navIcons = document.querySelectorAll('.nav-icons-container>div');
 let navLinks = document.querySelectorAll('.nav-text-container>span');
 
-navIcon.forEach((item, index, arr) => {
+let navLinksContainer = document.querySelector('.nav-text-container');
+
+let menuIcon = navIcons[0];
+
+navIcons.forEach((item, index, arr) => {
     item.addEventListener('mouseover', (e) => {
         item.classList.add('hovered');
         navLinks[index].classList.add('hovered');
@@ -15,10 +19,14 @@ navIcon.forEach((item, index, arr) => {
 navLinks.forEach((item, index, arr) => {
     item.addEventListener('mouseover', (e) => {
         item.classList.add('hovered');
-        navIcon[index].classList.add('hovered');
+        navIcons[index].classList.add('hovered');
     });
     item.addEventListener('mouseout', (e) => {
         item.classList.remove('hovered');
-        navIcon[index].classList.remove('hovered');
+        navIcons[index].classList.remove('hovered');
     });
+});
+
+menuIcon.addEventListener('click', () => {
+    navLinksContainer.classList.toggle('closeNav');
 });

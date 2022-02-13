@@ -53,6 +53,7 @@ nav i {
     font-size: 1.2rem;
     background-color: var(--50-blue);
     height: var(--display-height);
+    z-index: -1;
 }
 
 .nav-text-container span {
@@ -61,4 +62,9 @@ nav i {
     place-items: center start;
     padding: 0 1rem 0 0;
     color: var(--800-blue);
+}
+
+.closeNav {
+    transform: translateX(-200%);
+    opacity: 0;
 }
