@@ -53,7 +53,6 @@ nav i {
     font-size: 1.2rem;
     background-color: var(--50-blue);
     height: var(--display-height);
-    padding: 5rem 0 0 0;
 }
 
 .nav-text-container span {
