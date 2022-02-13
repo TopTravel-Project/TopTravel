@@ -7,15 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TopTravel</title>
 
-    <!-- font utilizzato: POPPINS 
-    https://fonts.google.com/specimen/Poppins?query=poppins 
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <!-- custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/pages/navbar/navbar.css">
 
     <!-- for icons:
     2: https://fontawesome.com/ 
@@ -25,41 +18,52 @@
 
 <body>
     <!-- navbar -->
-    <nav class="nav-close">
-        <div class="nav-functionalities">
+    <nav>
+
+        <!-- icone navbar -->
+        <div class="nav-icons-container">
+            <!-- 0 -->
+            <div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <!-- 1 -->
-            <div class="funz-card-inner mappa-card">
+            <div>
                 <i class="fa-solid fa-map-location-dot"></i>
-                <span>mappa</span>
             </div>
             <!-- 2 -->
-            <div class="funz-card-inner chat-card">
+            <div>
                 <i class="fa-solid fa-message"></i>
-                <span>chat</span>
             </div>
             <!-- 3 -->
-            <div class="funz-card-inner orario-card">
+            <div>
                 <i class="fa-solid fa-calendar-check"></i>
-                <span>programma</span>
             </div>
             <!-- 4 -->
-            <div class="funz-card-inner info-card">
+            <div>
                 <i class="fa-solid fa-circle-question"></i>
-                <span>info</span>
             </div>
         </div>
 
-        <!-- per aprire e chiudere la navbar -->
-        <div class="nav-button">
-            <i class="fa-solid fa-chevron-left"></i>
+        <!-- testo navbar -->
+        <div class="nav-text-container closeNav">
+            <!-- 0 -->
+            <span><!-- deve essere vuoto --></span>
+            <!-- 1 -->
+            <span>mappa</span>
+            <!-- 2 -->
+            <span>chat</span>
+            <!-- 3 -->
+            <span>programma</span>
+            <!-- 4 -->
+            <span>info</span>
         </div>
     </nav>
 
-    <main style="background-color: green">
-        hello world
+    <main style=" outline: 3px solid rgb(255, 0, 0); ">
+        hello world!
     </main>
 
-    <script src="./index.js"></script>
+    <script src="./css/pages/navbar/navbar.js "></script>
 </body>
 
 </html>
