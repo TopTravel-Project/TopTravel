@@ -62,17 +62,6 @@
     <main style=" outline: 3px solid rgb(255, 0, 0); ">
 
 
-        <div class="chat-container">
-            <!-- create a form to send message -->
-            <form onsubmit="return sendMessage();">
-                <input id="username" type="text" placeholder="enter name" autocomplete="off">
-                <input id="message" placeholder="Enter message" autocomplete="off">
-
-                <input type="submit">
-            </form>
-
-            <ul id="messages"></ul>
-        </div>
 
     </main>
 
@@ -80,13 +69,6 @@
     <script src="./css/pages/main/mainHtml.js"></script>
     <script src="./css/pages/chat/chat.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js" defer></script>
-
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyCGNts3w2UbD82xqK1MdVVZh5dxNl8eLhQ",
-        authDomain: "top-travel12345.firebaseapp.com", projectId: "top-travel12345", storageBucket: "top-travel12345.appspot.com", messagingSenderId: "710866710922", appId: "1:710866710922:web:9f301f78959b1a0ae89873", measurementId: "G-QN3QMBFTRL" };
-        const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
-    </script>
 
 </body>
 
