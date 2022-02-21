@@ -7,7 +7,7 @@
     --nav-width: 4rem;
     --display-height: 100vh;
     --display-width: 100vw;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 body {

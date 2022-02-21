@@ -8,7 +8,7 @@
     <title>TopTravel</title>
 
     <!-- custom CSS -->
-    <link rel="stylesheet" href="./css/pages/navbar/navbar.css">
+    <link rel="stylesheet" href="./style.css">
 
     <!-- for icons:
     2: https://fontawesome.com/ 
@@ -65,6 +65,10 @@
 
     <script src="./css/pages/navbar/navbar.js"></script>
     <script src="./css/pages/main/mainHtml.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js"; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
+    </script>
 </body>
 
 </html>

@@ -5,6 +5,8 @@ let main = document.querySelector('main');
 
 let navWidth;
 
+setDefaultPosition();
+
 menuIcon.addEventListener('click', () => {
     if (navLinksContainer.classList.contains('closeNav')) {
         navWidth = navbarIconContainer.offsetWidth;
@@ -14,3 +16,8 @@ menuIcon.addEventListener('click', () => {
         main.style.marginLeft = `${navWidth}px`;
     }
 });
+
+function setDefaultPosition() {
+    navWidth = navbarIconContainer.offsetWidth;
+    main.style.marginLeft = `${navWidth}px`;
+}
