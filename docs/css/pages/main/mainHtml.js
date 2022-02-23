@@ -5,14 +5,19 @@ let main = document.querySelector('main');
 
 let navWidth;
 
+
+
 setDefaultPosition();
 
-menuIcon.addEventListener('click', () => {
+// menuIcon
+document.querySelectorAll('.nav-icons-container>div')[0].addEventListener('click', () => {
+
+    // here was a small bug, if is happen another time, put the if code in else, and else code in if... and try to fix it.
     if (navLinksContainer.classList.contains('closeNav')) {
-        navWidth = navbarIconContainer.offsetWidth;
+        navWidth = navbarIconContainer.offsetWidth + navbarTextContainer.offsetWidth;
         main.style.marginLeft = `${navWidth}px`;
     } else {
-        navWidth = navbarIconContainer.offsetWidth + navbarTextContainer.offsetWidth;
+        navWidth = navbarIconContainer.offsetWidth;
         main.style.marginLeft = `${navWidth}px`;
     }
 });

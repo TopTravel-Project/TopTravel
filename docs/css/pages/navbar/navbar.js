@@ -30,5 +30,3 @@ navLinks.forEach((item, index, arr) => {
 menuIcon.addEventListener('click', () => {
     navLinksContainer.classList.toggle('closeNav');
 });
-
-//get the width of the nav
