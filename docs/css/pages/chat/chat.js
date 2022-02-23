@@ -1,22 +1,36 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyD3G7AONzK48NpMSqZyXF2GC4o313ZFbtU",
-    authDomain: "toptravel0.firebaseapp.com",
-    databaseURL: "https://toptravel0-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "toptravel0",
-    storageBucket: "toptravel0.appspot.com",
-    messagingSenderId: "1062383759951",
-    appId: "1:1062383759951:web:0f6c82154be94a6a86b03a",
-    measurementId: "G-PD6RZKY77P"
-};
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
 
 firebase.initializeApp({
-    apiKey: '### FIREBASE API KEY ###',
-    authDomain: '### FIREBASE AUTH DOMAIN ###',
-    projectId: '### CLOUD FIRESTORE PROJECT ID ###'
+    apiKey: 'AIzaSyDh778I0S2I5ccouLrXtUSbQSCBJJDsiI4',
+    authDomain: 'top-travel0.firebaseapp.com',
+    projectId: 'top-travel0'
 });
-
 var db = firebase.firestore();
+
+const booksRef = firebase
+    .firestore()
+    .collection("books");
+
+booksRef
+    .get()
+    .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        }));
+        console.log("All data in 'books' collection", data);
+        // [ { id: 'glMeZvPpTN1Ah31sKcnj', title: 'The Great Gatsby' } ]
+    });
+
+/* firebase
+    .firestore()
+    .collection("books")
+    .onSnapshot((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        }));
+        console.log("All data in 'books' collection", data);
+    }); */
