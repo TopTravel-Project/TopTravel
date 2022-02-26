@@ -61,25 +61,17 @@
 
     <main style=" outline: 3px solid rgb(255, 0, 0); ">
 
-        hello world
-
     </main>
 
     <!-- pages -->
-    <script src="../docs/css/pages/chat/chat.js" type="module"></script>
+    <script src="../docs/css/pages/chat/chat.js"></script>
     <script src="../docs/css/pages/main/mainHtml.js"></script>
     <script src="../docs/css/pages/navbar/navbar.js"></script>
 
-    <!-- firestore -->
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyDh778I0S2I5ccouLrXtUSbQSCBJJDsiI4",
-        authDomain: "top-travel0.firebaseapp.com", projectId: "top-travel0", storageBucket: "top-travel0.appspot.com", messagingSenderId: "295729263500", appId: "1:295729263500:web:b670dcf4859eed0371dca9", measurementId: "G-32T8ZTTTR6" }; const app =
-        initializeApp(firebaseConfig); const analytics = getAnalytics(app);
-    </script>
+    <script src="/node_modules/firebase/firebase-app.js" type="module"></script>
+    <script src="/node_modules/firebase/firebase-auth.js" type=""></script>
+    <script src="/node_modules/firebase/firebase-firestore.js"></script>
 </body>
 
 </html>
