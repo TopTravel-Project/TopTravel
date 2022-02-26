@@ -1,4 +1,4 @@
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyDAcLWuQWaT4hhVQiS-0y63UEAhPKmM70Q",
     authDomain: "toptravel012345.firebaseapp.com",
     projectId: "toptravel012345",
@@ -7,16 +7,10 @@ const firebaseConfig = {
     appId: "1:83033350851:web:a2a8443703665842d2f876",
     measurementId: "G-GR1J8VJVQM"
 }
+
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const firestore = firebase.firestore();
-const settings = {
-    timestampsInSnapshots: true,
-};
-firestore.settings(settings);
+console.log("✅ Firebase initialized Succesfully!");
 
-export default firebase;
-
-export {
-    firestore,
-};
+var db = firebase.firestore();

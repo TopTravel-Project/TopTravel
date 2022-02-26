@@ -1,25 +1,26 @@
 {
-    "name": "toptravel-5",
-    "version": "1.0.0",
-    "description": "top travel description",
-    "main": "index.js",
-    "directories": {
-        "doc": "docs"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/TopTravel-Project/TopTravel.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/TopTravel-Project/TopTravel/issues"
-    },
-    "homepage": "https://github.com/TopTravel-Project/TopTravel#readme",
-    "dependencies": {
-        "firebase": "10.2.1"
-    }
+  "name": "toptravel-5",
+  "version": "1.0.0",
+  "description": "top travel description",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TopTravel-Project/TopTravel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TopTravel-Project/TopTravel/issues"
+  },
+  "homepage": "https://github.com/TopTravel-Project/TopTravel#readme",
+  "dependencies": {
+    "firebase": "10.2.1"
+  },
+  "devDependencies": {}
 }

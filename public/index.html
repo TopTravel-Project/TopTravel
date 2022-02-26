@@ -59,19 +59,21 @@
         </div>
     </nav>
 
-    <main style=" outline: 3px solid rgb(255, 0, 0); ">
+    <main style=" height: 2rem;outline: 3px solid rgb(255, 0, 0); ">
 
     </main>
 
     <!-- pages -->
-    <script src="../docs/css/pages/chat/chat.js"></script>
-    <script src="../docs/css/pages/main/mainHtml.js"></script>
-    <script src="../docs/css/pages/navbar/navbar.js"></script>
 
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
-    <script src="/node_modules/firebase/firebase-app.js" type="module"></script>
-    <script src="/node_modules/firebase/firebase-auth.js" type=""></script>
-    <script src="/node_modules/firebase/firebase-firestore.js"></script>
+    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="./init-firebase.js"></script>
+
+    <script src="./css/pages/main/mainHtml.js "></script>
+    <script src="./css/pages/navbar/navbar.js "></script>
+    <script defer src="./css/pages/chat/chat.js"></script>
 </body>
 
 </html>
