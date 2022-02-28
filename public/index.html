@@ -60,28 +60,41 @@
     </nav>
 
     <main style="padding: 0.5rem;outline: 3px solid rgb(255, 0, 0);">
-        <div id="chat-container">
+        <!-- 1 -->
+        <section id="chat-container">
             hello world
-        </div>
-        <form id="chat-form">
-            <input id="messaggio-input" type="text" value="" placeholder="scrivi un messaggio">
-            <button id="btn-invia-messaggio">Invia messaggio</button>
-        </form>
+            <form id="chat-form">
+                <input id="messaggio-input" type="text" value="" placeholder="scrivi un messaggio">
+                <button id="btn-invia-messaggio">Invia messaggio</button>
+            </form>
+        </section>
 
-
+        <!-- 2 -->
+        <section id="accedi-container">
+            <button id="accedi-google">sign with google</button>
+            <button id="sign-out" onclick="firebase.auth().signOut();">sign out</button>
+        </section>
     </main>
 
     <!-- pages -->
 
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 
-    <!-- <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script> -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
     <script defer src="./init-firebase.js"></script>
 
-    <script src="./css/pages/main/mainHtml.js "></script>
-    <script src="./css/pages/navbar/navbar.js "></script>
-    <script defer src="./css/pages/chat/chat.js"></script>
+    <script type="module" defer src="./functionalities/pages/chat/chat.js"></script>
+    <script src="./functionalities/pages/main/mainHtml.js"></script>
+    <script src="./functionalities/pages/navbar/navbar.js"></script>
+    <script type="module" defer src="./functionalities/pages/signIn/accediConGoogle.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </body>
 
 </html>
